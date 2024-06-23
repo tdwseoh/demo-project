@@ -13,7 +13,10 @@ library(dplyr)
 library(readr)
 # Scatter plot of GDP per capita vs. Life satisfaction
 df <- read_csv("better-life-index-2024.csv")
-
+country_lookup <- data.frame(
+  Original = c("Czechia", "Türkiye", "Korea", "Slovak Republic", "United States"),
+  Corrected = c("Czech Republic", "Turkey", "South Korea", "Slovakia", "United States of America")
+)
 ggplot(df, aes(x = `GDP per capita (USD)`, y = `Life satisfaction`)) +
   geom_point() +
   geom_smooth(method = "lm", col = "blue") +

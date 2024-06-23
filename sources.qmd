@@ -2,3 +2,4 @@
 title: "Sources"
 ---
 
+The data was from [**Kaggle**](https://www.kaggle.com/datasets/darrylljk/better-life-index-2024-life-satisfaction), which was sourced from [**OECD**](https://stats.oecd.org/index.aspx?DataSetCode=BLI#) and [**IMF**](https://www.imf.org/en/Publications/WEO/weo-database/2024/April/download-entire-database). Data was cleaned to remove variables that will not be used in the project, and was modified to correct wrong country codes in the data set to avoid errors.
