@@ -9,6 +9,8 @@ website:
         text: Home
       - href: about.qmd
         text: About
+      - href: graph-1.qmd
+        text: "Graph #1"
       - text: "Sources"
         href: sources.html
 

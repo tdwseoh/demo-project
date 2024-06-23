@@ -1,0 +1,31 @@
+---
+title: "How does GDP Per Capita affect Life Satisfaction?"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+library(ggplot2)
+library(rworldmap)
+library(dplyr)
+library(readr)
+# Scatter plot of GDP per capita vs. Life satisfaction
+df <- read_csv("better-life-index-2024.csv")
+
+ggplot(df, aes(x = `GDP per capita (USD)`, y = `Life satisfaction`)) +
+  geom_point() +
+  geom_smooth(method = "lm", col = "blue") +
+  labs(title = "OECD GDP Per Capita vs. Life Satisfaction",
+       subtitle = "Correlation between GDP per Capita and\nLife Satisfaction in OECD, 2024",
+       x = "GDP per Capita (USD)",
+       y = "Life Satisfaction (0-10)", 
+       caption = "Data: OECD. and IMF, 2024.") +
+   theme(plot.title = element_text(face = "bold", size = 20, margin = margin(b=5)), 
+        plot.subtitle = element_text(face = "italic", size = 15, margin = margin(b = 10)), 
+        plot.caption = element_text(face = "italic", margin = margin(t = 5)), 
+        axis.title.y = element_text(face = "bold"), 
+        axis.title.x = element_text(face = "bold"),
+        axis.text = element_text(face = "bold"))
+```
