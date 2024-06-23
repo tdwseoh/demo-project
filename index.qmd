@@ -1,0 +1,42 @@
+---
+title: "OECD Better Life Index"
+author: Thomas Seoh
+format: html
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+#| message: false
+#| warning: false
+library(ggplot2)
+library(rworldmap)
+library(dplyr)
+library(readr)
+
+# Load the data
+df <- read_csv("better-life-index-2024.csv")
+
+# Prepare data for mapping and suppress messages
+suppressMessages({
+  world_map <- joinCountryData2Map(df, joinCode = "NAME", nameJoinColumn = "Country")
+})
+
+# Plot the heat map
+oecd_palette <- colorRampPalette(c("yellow", "red"))
+oecd_colors <- oecd_palette(100)
+
+# Plot the heat map with custom colors
+map <- mapCountryData(world_map, nameColumnToPlot = "Life satisfaction", 
+                      mapTitle = "Life Satisfaction in OECD Members",
+                      catMethod = "pretty", colourPalette = oecd_colors, 
+                      addLegend = TRUE, missingCountryCol = "lightgrey", 
+                      oceanCol = "#0050A1",  # Slightly lighter blue for the ocean
+                      borderCol = "grey")
+mtext("Better Life Index 2024", side = 3, line = -0.5, cex = 1.2, col = "black", font = 1.5)
+
+# Add caption manually using mtext function
+mtext("Life Satisfaction scale is from 0 to 10, least to greatest. Lowest score is 5.5, highest is 8 within OECD.", side = 1, line = 4, cex = 0.8, col = "black", font = 1, adj = 0)
+```
