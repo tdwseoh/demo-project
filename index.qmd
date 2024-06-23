@@ -1,5 +1,5 @@
 ---
-title: "OECD Better Life Index"
+title: "OECD Better Life Index 2024 Analysis"
 author: Thomas Seoh
 format: html
 execute:
@@ -7,7 +7,7 @@ execute:
   message: false
   warning: false
 ---
-
+The standard of a good or better well-being of a country may be undefinable, however, the OECD Better Life Index (BLI) has proven to be an accountable index to represent and visualize a nation's well-being. The data was sourced from a data set which used data originally from the OECD and IMF (2024). Then, mapping data was used to visualize the correlations between the GDP per capita and other variables of BLI, thus the BLI visualized around the world. The visualization indicates that Northern European and Oceania countries represented the highest BLI, and the GDP per capita has been positively correlated with variables of the BLI.
 ```{r}
 #| message: false
 #| warning: false
