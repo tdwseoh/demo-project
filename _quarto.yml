@@ -11,6 +11,8 @@ website:
         text: About
       - href: graph-1.qmd
         text: "Graph #1"
+      - href: graph-2.qmd
+        text: "Graph #2"
       - text: "Sources"
         href: sources.html
 
