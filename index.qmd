@@ -15,5 +15,5 @@ The standard of a good or better well-being of a country may be undefinable, how
 ```{r}
 #| label: Analysis Graph
 #| echo: false
-knitr::include_graphics("graphs/overview_graphic.png")
+knitr::include_graphics("analysis_graphic.png")
 ```
