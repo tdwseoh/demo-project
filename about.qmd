@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-**Thomas Seoh** is a studying data scientist. Here is [*My **Github***](https://github.com/tdwseoh). Contact me [***here***](https://mail.google.com/mail/u/0/?fs=1&to=tommyseoh@gmail.com&tf=cm)*!* (tommyseoh@gmail.com)
+This project was created by **Thomas Seoh**, a grade 8 student from Ontario, Canada. Here is [*My **Github***](https://github.com/tdwseoh). Contact me [***here***](https://mail.google.com/mail/u/0/?fs=1&to=tommyseoh@gmail.com&tf=cm)*!* (tommyseoh@gmail.com)
 
 My project, __OECD Better Life Index__ was created to represent the different variables that define Life Satisfaction, and what quality of life is defined of. The OECD consists of mostly more advanced nations, and my project has also compared the Better Life Index differences within the OECD.
 
