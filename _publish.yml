@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: a010c1bf-9832-45e0-b1eb-adc8bb7f1ad6
+      url: 'https://tseoh.quarto.pub/oecd-better-life-index-2024-analysis'
