@@ -3,6 +3,7 @@ library(rworldmap)
 library(dplyr)
 library(readr)
 library(knitr)
+library(tidyr)
 
 # Load the data
 df <- read_csv("better-life-index-2024.csv")
