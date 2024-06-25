@@ -32,3 +32,7 @@ ggplot(df, aes(x = `GDP per capita (USD)`, y = `Life satisfaction`)) +
         axis.title.x = element_text(face = "bold"),
         axis.text = element_text(face = "bold"))
 ```
+
+## **Analysis**
+
+This scatter plot shows that the OECD GDP per capita and Life Satisfaction levels correlate positively, as shown by the positive trend line. If you do not know, the "*5e+04*", the E+n symbol, represents the preceding number (5) of E+, multiplied by 10 to the nth power.

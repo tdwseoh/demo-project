@@ -39,3 +39,6 @@ ggplot(df, aes(x = reorder(Country, `GDP per capita (USD)`), y = `Self-reported 
         plot.legend = element_text(face = "bold"))
 ```
 
+## **Analysis**
+
+This plot represents the OECD GDP per capita and self-reported health. While generally representing a slight positive correlation, the correlation is a tad irregular. However, the self-reported health levels generally do go up with the GDP per capita.

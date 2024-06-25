@@ -60,3 +60,7 @@ map <- mapCountryData(world_map, nameColumnToPlot = "Life satisfaction",
 mtext("Better Life Index 2024", side = 3, line = -0.5, cex = 1.2, col = "black", font = 1.5)
 mtext("Life Satisfaction scale is from 0 to 10, least to greatest. Lowest score is 4.5, highest is 8 within OECD.", side = 1, line = 4, cex = 0.8, col = "black", font = 1, adj = 0)
 ```
+
+## **Analysis**
+
+The standard of a good or better well-being of a country may be undefinable, however, the OECD Better Life Index (BLI) has proven to be an accountable index to represent and visualize a nation’s well-being. The data was sourced from a data set which used data originally from the OECD and IMF (2024). Then, mapping data was used to visualize the correlations between the GDP per capita and other variables of BLI, thus the BLI visualized around the world. The visualization indicates that Northern European and Oceania countries represented the highest BLI, and the GDP per capita has been positively correlated with variables of the BLI.
