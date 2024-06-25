@@ -1,5 +1,5 @@
 ---
-title: "How does GDP Per Capita affect\nSelf Reported Health?"
+title: "How does GDP Per Capita affect\nSelf-Reported Health?"
 execute:
   echo: false
   message: false
