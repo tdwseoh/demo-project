@@ -9,6 +9,11 @@ website:
         text: Home
       - href: about.qmd
         text: About
+        menu: 
+          - href: graph-1.qmd
+            text: Graph 1
+          - href: graph-2.qmd
+            text: Graph 2
       - href: graph-1.qmd
         text: "Graph #1"
       - href: graph-2.qmd
@@ -21,6 +26,5 @@ format:
     theme: yeti
     css: styles.css
     toc: true
-
 
 
