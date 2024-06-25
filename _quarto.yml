@@ -9,22 +9,17 @@ website:
         text: Home
       - href: about.qmd
         text: About
-        menu: 
-          - href: graph-1.qmd
+      - text: Graphs
+        menu:
+          - href: graph-1.html
             text: Graph 1
-          - href: graph-2.qmd
+          - href: graph-2.html
             text: Graph 2
-      - href: graph-1.qmd
-        text: "Graph #1"
-      - href: graph-2.qmd
-        text: "Graph #2"
-      - text: "Sources"
-        href: sources.html
+      - href: sources.html
+        text: Sources
 
 format:
   html:
     theme: yeti
     css: styles.css
     toc: true
-
-

@@ -51,7 +51,7 @@ map <- mapCountryData(world_map, nameColumnToPlot = "Life satisfaction",
 
 # Add caption manually using mtext function
 mtext("Better Life Index 2024", side = 3, line = -0.5, cex = 1.2, col = "black", font = 1.5)
-mtext("Life Satisfaction scale is from 0 to 10, least to greatest. Lowest score is 5.5, highest is 8 within OECD.", side = 1, line = 4, cex = 0.8, col = "black", font = 1, adj = 0)
+mtext("Life Satisfaction scale is from 0 to 10, least to greatest. Lowest score is 4.5, highest is 8 within OECD.", side = 1, line = 4, cex = 0.8, col = "black", font = 1, adj = 0)
 ```
 
 ## **Analysis**
