@@ -1,0 +1,36 @@
+---
+title: "Do Employees Working Very Long Hours have Time Devoted to Leisure and Personal Care?"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+# Loading the packages
+library(ggplot2)
+library(readr)
+
+# Load data
+df <- read_csv("better-life-index-2024.csv")
+
+# Scatter plot
+ggplot(df, aes(x = `Employees working very long hours`, y = `Time devoted to leisure and personal care`)) +
+  geom_point(color = "blue", size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = FALSE) +
+  labs(title = "Employees Working Very Long Hours vs. Time Devoted to Leisure and Personal Care",
+       subtitle = "Correlation between Employees Working Very Long Hours and \nTime Devoted to Leisure and Personal Care in OECD, 2024",
+       x = "Employees Working Very Long Hours (%)",
+       y = "Time Devoted to Leisure and Personal Care (hrs/day)", 
+       caption = "Very Long Work Hours are 50+ Hours.") +
+  theme(plot.title = element_text(face = "bold", size = 20, margin = margin(b=5)), 
+        plot.subtitle = element_text(face = "italic", size = 15, margin = margin(b = 10)), 
+        plot.caption = element_text(face = "italic", margin = margin(t = 5)), 
+        axis.title.y = element_text(face = "bold"), 
+        axis.title.x = element_text(face = "bold"),
+        axis.text = element_text(face = "bold"))
+```
+
+## **Analysis**
+
+The Employees Working Very Long Hours and Time Devoted to Leisure and Personal Care shows strong negative correlation. The outcome was predicted, as employees working less hours will generally have more spare time. While it depends if they will devote time to leisure and personal care, the average amount of time spent will increase, creating a clear correlation.

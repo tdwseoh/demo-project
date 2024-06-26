@@ -9,6 +9,7 @@ execute:
 ---
 
 ```{r}
+# Loading the libraries required
 library(ggplot2)
 library(rworldmap)
 library(dplyr)
@@ -17,13 +18,13 @@ library(readr)
 # Load the data
 df <- read_csv("better-life-index-2024.csv")
 
-# Create a lookup table to correct country names
+# Create a lookup table to correct country names (clean the data set)
 country_lookup <- data.frame(
   Original = c("Czechia", "Türkiye", "Korea", "Slovak Republic", "United States"),
   Corrected = c("Czech Republic", "Turkey", "South Korea", "Slovakia", "United States of America")
 )
 
-# Correct the country names in the data
+# Correct the country names in the data (clean the data set)
 df <- df %>%
   left_join(country_lookup, by = c("Country" = "Original")) %>%
   mutate(Country = ifelse(is.na(Corrected), Country, Corrected)) %>%
@@ -35,7 +36,7 @@ invisible(capture.output({
   world_map <- joinCountryData2Map(df, joinCode = "NAME", nameJoinColumn = "Country", verbose = FALSE)
 }))
 
-# Filter out rows with countries not in the world map
+# Filter out rows with countries not in the world map package
 df <- df %>%
   filter(Country %in% world_map$ADMIN)
 
@@ -45,7 +46,7 @@ invisible(capture.output({
   world_map <- joinCountryData2Map(df, joinCode = "NAME", nameJoinColumn = "Country", verbose = FALSE)
 }))
 
-# Plot the heat map
+# Plot the heat map on the graph
 oecd_palette <- colorRampPalette(c("yellow", "red"))
 oecd_colors <- oecd_palette(100)
 
@@ -56,7 +57,7 @@ map <- mapCountryData(world_map, nameColumnToPlot = "Life satisfaction",
                       oceanCol = "#0050A1",  # Slightly lighter blue for the ocean
                       borderCol = "grey")
 
-# Add caption manually using mtext function
+# Add caption manually using mtext function (customized labels for the worldmap plot, as theme is inapplicable in this package)
 mtext("Better Life Index 2024", side = 3, line = -0.5, cex = 1.2, col = "black", font = 1.5)
 mtext("Life Satisfaction scale is from 0 to 10, least to greatest. Lowest score is 4.5, highest is 8 within OECD.", side = 1, line = 4, cex = 0.8, col = "black", font = 1, adj = 0)
 ```

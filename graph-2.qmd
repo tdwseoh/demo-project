@@ -7,11 +7,13 @@ execute:
 ---
 
 ```{r}
+# Loading the packages
 library(ggplot2)
 library(rworldmap)
 library(dplyr)
 library(readr)
 
+# Loading the data set
 df <- read_csv("better-life-index-2024.csv")
 country_lookup <- data.frame(
   Original = c("Czechia", "Türkiye", "Korea", "Slovak Republic", "United States"),
@@ -20,7 +22,7 @@ country_lookup <- data.frame(
 df <- df %>%
   arrange(desc(`GDP per capita (USD)`))
 
-# Bar chart
+# Bar graph for 2nd plot
 ggplot(df, aes(x = reorder(Country, `GDP per capita (USD)`), y = `Self-reported health`, fill = `GDP per capita (USD)`)) +
   geom_bar(stat = "identity") +
   coord_flip() +
