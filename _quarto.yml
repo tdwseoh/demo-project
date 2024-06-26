@@ -15,6 +15,8 @@ website:
             text: Graph 1
           - href: graph-2.html
             text: Graph 2
+          - href: graph-3.html
+            text: Graph 3
       - href: sources.html
         text: Sources
 

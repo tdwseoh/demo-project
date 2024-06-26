@@ -1,0 +1,34 @@
+---
+title: "Does Water Quality affect Self-reported Health?"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r}
+library(ggplot2)
+library(readr)
+
+# Load data
+df <- read_csv("better-life-index-2024.csv")
+
+# Scatter plot
+ggplot(df, aes(x = `Water quality`, y = `Self-reported health`)) +
+  geom_point(color = "blue", size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = FALSE) +
+  labs(title = "Water Quality vs Self-reported Health",
+       subtitle = "Correlation between Water Quality and \nSelf-reported Health in OECD, 2024",
+       x = "Water Quality",
+       y = "Self-reported Health") +
+  theme(plot.title = element_text(face = "bold", size = 20, margin = margin(b=5)), 
+        plot.subtitle = element_text(face = "italic", size = 15, margin = margin(b = 10)), 
+        plot.caption = element_text(face = "italic", margin = margin(t = 5)), 
+        axis.title.y = element_text(face = "bold"), 
+        axis.title.x = element_text(face = "bold"),
+        axis.text = element_text(face = "bold"))
+```
+
+## **Analysis**
+
+Unlike Graph 2, the Water Quality had little to no correlation with Self-reported Health in OECD nations. It is assumed in more advanced nations such as the OECD members, proper health care is far more important than water infrastructure. Furthermore, the Water Quality level is considered good on the average level in the OECD, which is also a factor that demonstrates the low relativity to Self-reported Health. 
