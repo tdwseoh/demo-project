@@ -10,6 +10,7 @@ execute:
 
 ```{r}
 # Loading the libraries required
+# Install these packages in Console before running this code
 library(ggplot2)
 library(rworldmap)
 library(dplyr)
